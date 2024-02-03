@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chart js</title>
+    <style>
+        #chart-container{
+            width:640px;
+            height:auto;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="chart-container">
+        <canvas id="bar-chart" width="800" height="450"></canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js">
+    </script>
+    <script>
+        new Chart(document.getElementById("bar-chart"),{
+            type: 'horizontalBar',
+            data: {
+            labels:["1","2","3","4","5"],
+            datasets: [
+                {
+                    label:"score board",
+                    backgroundColor:  ["#e7fdda","#dffaff","#cfffdf","#bfffcf","#9efdb8"],
+                    data: [12,50,30,85,23]
+                }
+            ]
+            },
+            options:{
+                legend:{display:false},
+                title:{
+                    display:true,
+                    text:"score board"
+                }
+            }
+        });
+    </script>
+</body>
+</html>
